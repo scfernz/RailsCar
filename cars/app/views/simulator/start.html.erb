@@ -1,0 +1,26 @@
+<h1 class="text-center">Car Simulator</h1>
+<form class="text-center" action="/car/get_info" method="get">
+  <!-- year: -->
+  Year: <input type="number" name="year" min="1908" max="2016" placeholder="2016" required/>
+
+  <!-- make: -->
+  Make:
+  <select name="model">
+    <option value="Jeep">Jeep</option>
+    <option value="John Deere">John Deere</option>
+    <option value="Bugatti">Bugatti</option>
+    <option value="Toyota">Toyota</option>
+  </select>
+
+  <!-- color: -->
+  Color:
+  <select name="color">
+    <option value="papayawhip">Papaya Whip</option>
+    <option value="forestgreen">Forest Green</option>
+    <option value="salmon">Salmon</option>
+    <option value="mediumpurple">Medium Purple</option>
+  </select>
+
+  <!-- push to start -->
+  <input class="btn btn-danger" type="submit" value="Push to Start">
+</form>

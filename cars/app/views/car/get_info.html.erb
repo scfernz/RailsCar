@@ -1,0 +1,44 @@
+<h1 class="text-center"> <%= @my_car.year %> <%= @my_car.model %> </h1>
+<h2 class="text-center">Current Speed: <%= @my_car.get_speed %> mph</h2>
+  <div class="row">
+    <div class="col-sm-6">
+      <form class="text-center" action="/car/accelerate" method="get">
+        <input class="btn btn-success" type="submit" value="Accelerate"/>
+      </form>
+      </div>
+
+      <div class="col-sm-6">
+        <form class="text-center" action="/car/brake" method="get">
+          <input class="btn btn-danger" type="submit" value="Brake"/>
+        </form>
+      </div>
+
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6 text-center">
+      <h2>
+        <form action="/car/lights_on" method="get">
+          <input class="btn btn-warning" type="submit" value="Toggle Lights"/>
+        </form>
+      </h2>
+    </div>
+
+      <div class="col-sm-6">
+        <h2 class="text-center"> Lights: <%= @my_car.lights %> </h2>
+      </div>
+  </div>
+
+  <h4 class="text-center">
+    <form class="form-inline" action="/car/parking_brake" method="get">
+      <div class="form-group">
+        <label for="e_brake">Parking Brake</label>
+      </div>
+      <div class="form-group">
+        <input type="radio" id="e_brake" name="e_brake" value=" off" onclick="javascript: submit()"/>Off
+      </div>
+      <div class="form-group">
+        <input type="radio" id="e_brake" name="e_brake" value=" on" onclick="javascript: submit()"/>On
+      </div>
+    </form>
+  </h4>
